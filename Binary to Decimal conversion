@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  long long bin;
+  scanf("%lld",&bin);
+  int dec=0,i=0,remainder;
+  while(bin!=0)
+  {
+     remainder=bin%10;
+     bin=bin/10;
+     dec=dec+(remainder*pow(2,i));
+     ++i;
+  }
+  printf("%d",dec);
+  return 0;
+}
