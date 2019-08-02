@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+  int n,arr[100],count=0,search;
+  scanf("%d",&n);
+  for(int i=0;i<n;i++)
+  {
+     scanf("%d",&arr[i]);
+  }
+  scanf("%d",&search);
+  for(int i=0;i<n;i++)
+  {
+     if(arr[i]==search)
+     {
+        printf("%d\n",i+1);
+        count++;
+        break;
+     }
+  }
+  if(count==0)
+  {
+     printf("%d isn't present in the array.\n",search);
+  }
+  else
+    printf("%d present in the array %d times.\n",search,count);
+  return 0;
+}
